@@ -583,5 +583,5 @@ FFmpegDemuxer::FFmpegDemuxer(AVFormatContext *fmtcx) : fmtc(fmtcx) {
 
   /* Some inputs doesn't allow seek functionality.
    * Check this ahead of time. */
-  is_seekable = fmtc->iformat->read_seek || fmtc->iformat->read_seek2;
+  is_seekable = true; //->iformat->read_seek || fmtc->iformat->read_seek2;
 }
